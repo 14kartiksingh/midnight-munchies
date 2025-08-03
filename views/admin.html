@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Items</th>
+        <th>Payment</th>
+      </tr>
+    </thead>
+    <tbody id="ordersTable"></tbody>
+  </table>
+
+  <script>
+    fetch('/orders')
+      .then(res => res.json())
+      .then(data => {
+        const table = document.getElementById("ordersTable");
+        data.forEach(order => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${order.name}</td>
+            <td>${order.address}</td>
+            <td>${order.items}</td>
+            <td>${order.payment}</td>
+          `;
+          table.appendChild(row);
+        });
+      })
+      .catch(err => {
+        console.error('Error:', err);
+      });
+  </script>
+</body>
+</html>

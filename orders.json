@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Kartik",
+    "address": "Sector 69",
+    "items": "Midnight Burger x1, Dragon Noodles x2",
+    "payment": "UPI"
+  },
+  {
+    "name": "Ravi",
+    "address": "Unknown",
+    "items": "Dragon Noodles x1",
+    "payment": "COD"
+  }
+]

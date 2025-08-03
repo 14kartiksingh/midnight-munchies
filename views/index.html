@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midnight Munchies | Late Night Delivery</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <h1>Midnight Munchies</h1>
+                <div class="header-right">
+                    <div class="opening-hours">
+                        <i class="fas fa-clock"></i> 11PM - 3AM Only
+                    </div>
+                    <a href="/cart" class="cart-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+            <p class="tagline">Late Night Cravings Satisfied!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="menu">
+            <h2><i class="fas fa-utensils"></i> Our Late Night Menu</h2>
+            <div class="menu-grid">
+                <!-- Menu Item 1 -->
+                <div class="menu-item">
+                    <img src="/images/menu-items/burger.jpg" alt="Midnight Burger">
+                    <div class="item-details">
+                        <h3>Midnight Burger</h3>
+                        <p>Double patty with special sauce</p>
+                        <div class="item-footer">
+                            <span class="price">₹150</span>
+                            <button class="add-to-cart" data-id="1" data-name="Midnight Burger" data-price="150">
+                                <i class="fas fa-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Menu Item 2 -->
+                <div class="menu-item">
+                    <img src="/images/menu-items/noodles.jpg" alt="Dragon Noodles">
+                    <div class="item-details">
+                        <h3>Dragon Noodles</h3>
+                        <p>Spicy schezwan noodles</p>
+                        <div class="item-footer">
+                            <span class="price">₹120</span>
+                            <button class="add-to-cart" data-id="2" data-name="Dragon Noodles" data-price="120">
+                                <i class="fas fa-plus"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more menu items here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Midnight Munchies. Open 11PM-3AM only.</p>
+        </div>
+    </footer>
+
+    <script src="/js/menu.js"></script>
+</body>
+</html>
