@@ -24,13 +24,14 @@
       .then(res => res.json())
       .then(data => {
         const table = document.getElementById("ordersTable");
+        table.innerHTML = ''; // Clear previous
         data.forEach(order => {
           const row = document.createElement("tr");
           row.innerHTML = `
-            <td>${order.name}</td>
-            <td>${order.address}</td>
-            <td>${order.items}</td>
-            <td>${order.payment}</td>
+            <td>${order.name || '-'}</td>
+            <td>${order.address || '-'}</td>
+            <td>${order.items || '-'}</td>
+            <td>${order.payment || '-'}</td>
           `;
           table.appendChild(row);
         });
